@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.sushi-container {
+  margin: 20px 0;
+}
+
+.sushi-container img {
+  width: 100px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.sushi-container img:active {
+  transform: scale(1.1);
+}
+
+.counter p {
+  font-size: 24px;
+  font-weight: bold;
+}
