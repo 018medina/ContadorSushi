@@ -30,3 +30,11 @@ body {
   font-size: 24px;
   font-weight: bold;
 }
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+}
