@@ -6,16 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contador de Sushis</title>
   <link rel="stylesheet" href="style.css">
+  <!-- <link rel="icon" href="imagens/favicon.ico" type="image/x-icon"> -->
+  <link rel="icon" href="sushi1.png" type="image/x-icon">
+  <!-- <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon"> -->
+  <link rel="shortcut icon" href="sushi1.png" type="image/x-icon">
 </head>
 
 <body>
   <div class="container">
     <h1>Contador de Sushis</h1>
     <div class="sushi-container">
-      <img id="sushiImage" src="sushi1.png" alt="Sushi" onclick="incrementCounter()">
+      <button class="contadores" onclick="decrementCounter()">-</button>
+      <img id="sushiImage" src="sushi1.png" alt="Sushi">
+      <button class="contadores" onclick="incrementCounter()">+</button>
     </div>
-    <div class="counter">
+    <div class=" counter">
       <p>Sushis Comidos: <span id="sushiCounter">0</span></p>
+    </div>
+    <div>
+      <button class="btnZerar" onclick="zeroCounter()">Zerar</button>
     </div>
     <footer>
       Desenvolvido por Fábio Medina
