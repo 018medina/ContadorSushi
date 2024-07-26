@@ -1,11 +1,23 @@
-let sushiCounter = 0;
+let sushiCounter = localStorage.getItem("sushiCount")
+  ? parseInt(localStorage.getItem("sushiCount"))
+  : 0;
 const sushiImage = document.getElementById("sushiImage");
 const sushiCounterDisplay = document.getElementById("sushiCounter");
+sushiCounterDisplay.textContent = sushiCounter;
+updateSushiImage();
 
 function incrementCounter() {
   sushiCounter++;
   sushiCounterDisplay.textContent = sushiCounter;
   updateSushiImage();
+}
+
+function decrementCounter() {
+  if (sushiCounter !== 0) {
+    sushiCounter--;
+    sushiCounterDisplay.textContent = sushiCounter;
+    updateSushiImage();
+  }
 }
 
 function updateSushiImage() {
@@ -18,4 +30,12 @@ function updateSushiImage() {
   } else {
     sushiImage.src = "sushi4.png";
   }
+
+  localStorage.setItem("sushiCount", sushiCounter);
+}
+
+function zeroCounter() {
+  sushiCounter = 0;
+  sushiCounterDisplay.textContent = sushiCounter;
+  updateSushiImage();
 }
